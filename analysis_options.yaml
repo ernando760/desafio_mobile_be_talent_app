@@ -1,0 +1,7 @@
+include: package:flutter_lints/flutter.yaml
+
+linter:
+  rules:
+    - sort_pub_dependencies: true
+    - prefer_single_quotes: true
+    - avoid_print: false

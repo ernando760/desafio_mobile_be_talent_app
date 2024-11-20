@@ -1,0 +1,25 @@
+name: desafio_mobile_be_talent_app
+description: "Este é um projeto desenvolvido como parte do processo seletivo para a vaga de Jr Mobile Flutter ou React Native (Remoto) na Be Talent."
+
+publish_to: "none"
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.5.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+  flutter_modular: ^6.3.4
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+  mocktail: ^1.0.4
+
+flutter:
+  uses-material-design: true
