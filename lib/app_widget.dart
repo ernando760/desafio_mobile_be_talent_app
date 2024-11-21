@@ -8,7 +8,9 @@ class AppWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Modular.setInitialRoute("/splash/");
     return MaterialApp.router(
+      debugShowCheckedModeBanner: false,
       theme: AppTheme.theme,
       title: "Be Talent App Demo",
       routerConfig: Modular.routerConfig,
