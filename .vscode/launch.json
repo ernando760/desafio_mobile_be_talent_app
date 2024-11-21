@@ -4,7 +4,10 @@
         {
             "name": "desafio_mobile_be_talent_app",
             "request": "launch",
-            "type": "dart"
+            "type": "dart",
+            "args": [
+                "--dart-define=URL_API=http://0.0.0.0:3000"
+            ]
         },
     ]
 }
