@@ -14,6 +14,10 @@ dependencies:
 
   cupertino_icons: ^1.0.8
   flutter_modular: ^6.3.4
+  dio: ^5.7.0
+  result_dart: ^1.1.1
+  equatable: ^2.0.6
+  flutter_svg: ^2.0.15
 
 dev_dependencies:
   flutter_test:
@@ -23,6 +27,9 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+
+  assets:
+    - assets/images/logo/be-talent-logo.svg
 
   fonts:
     - family: Helvetica
