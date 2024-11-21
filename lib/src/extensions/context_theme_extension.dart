@@ -11,6 +11,7 @@ extension ContextThemeExtension on BuildContext {
   Color get gray05 => Theme.of(this).extension<AppThemeColors>()!.gray05;
   Color get gray10 => Theme.of(this).extension<AppThemeColors>()!.gray10;
   Color get gray20 => Theme.of(this).extension<AppThemeColors>()!.gray20;
+  Color get white => Theme.of(this).extension<AppThemeColors>()!.white;
   Color get black => Theme.of(this).extension<AppThemeColors>()!.black;
 
   // Spacing
