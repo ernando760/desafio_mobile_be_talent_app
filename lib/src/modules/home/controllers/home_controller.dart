@@ -38,8 +38,6 @@ class HomeController extends ChangeNotifier {
             employee.phone.contains(info))
         .toList();
 
-    if (info.isEmpty) {}
-
     _updateState(LoadedHomeState(
         employees: employees, filteredEmployees: filteredEmployees));
   }
