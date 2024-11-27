@@ -12,9 +12,10 @@ final class InitialHomeState extends HomeState {}
 final class LoadingHomeState extends HomeState {}
 
 final class LoadedHomeState extends HomeState {
-  LoadedHomeState({required this.employees});
+  LoadedHomeState({required this.employees, this.filteredEmployees = const []});
 
   final List<EmployeeModel> employees;
+  final List<EmployeeModel> filteredEmployees;
 
   @override
   List<Object?> get props => [employees];

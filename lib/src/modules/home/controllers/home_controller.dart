@@ -14,7 +14,7 @@ class HomeController extends ChangeNotifier {
 
   Future<void> getAllEmployees() async {
     _updateState(LoadingHomeState());
-    await Future.delayed(const Duration(milliseconds: 800));
+
     final response = await _homeRepository.getAllEmployees();
 
     final state = response.fold(
@@ -22,6 +22,26 @@ class HomeController extends ChangeNotifier {
         (exception) => FailureHomeState(messageError: exception.messageError));
 
     _updateState(state);
+  }
+
+  void searchEmployeeInfo(String info) {
+    if (state is! LoadedHomeState) return;
+
+    final employees = (state as LoadedHomeState).employees;
+
+    info = info.toLowerCase();
+
+    final filteredEmployees = employees
+        .where((employee) =>
+            employee.name.toLowerCase().contains(info) ||
+            employee.job.toLowerCase().contains(info) ||
+            employee.phone.contains(info))
+        .toList();
+
+    if (info.isEmpty) {}
+
+    _updateState(LoadedHomeState(
+        employees: employees, filteredEmployees: filteredEmployees));
   }
 
   void _updateState(HomeState newState) {
