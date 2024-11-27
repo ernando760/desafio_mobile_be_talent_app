@@ -26,7 +26,7 @@ Para rodar a aplicação localmente, siga as etapas abaixo:
 1. **Clone o repositório**:
 
    ```bash
-   git clone https://github.com/BeMobile/desafio-mobile.git
+   git clone https://github.com/ernando760/desafio_mobile_be_talent_app.git
    ```
 
 2. **Navegue até o diretório do projeto**:
