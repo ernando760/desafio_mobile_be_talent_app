@@ -32,7 +32,7 @@ Para rodar a aplicação localmente, siga as etapas abaixo:
 2. **Navegue até o diretório do projeto**:
 
    ```bash
-   cd desafio-mobile
+   cd desafio_mobile_be_talent_app
    ```
 
 3. **Instale as dependências**:
