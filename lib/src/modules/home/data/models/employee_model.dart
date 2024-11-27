@@ -1,5 +1,5 @@
 class EmployeeModel {
-  final int id;
+  final String id;
   final String name;
   final String job;
   final DateTime admissionDate;
