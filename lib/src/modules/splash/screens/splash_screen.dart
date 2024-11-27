@@ -11,31 +11,15 @@ class SplashScreen extends StatefulWidget {
   State<SplashScreen> createState() => _SplashScreenState();
 }
 
-class _SplashScreenState extends State<SplashScreen>
-    with SingleTickerProviderStateMixin {
-  late AnimationController _controller;
-  late Animation<double> _animation;
-
+class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    _controller = AnimationController(
-        vsync: this, duration: const Duration(milliseconds: 700));
-
-    _animation = Tween<double>(begin: 0.0, end: 1).animate(_controller);
-
     WidgetsBinding.instance.addPostFrameCallback((_) async {
-      await _controller.forward();
-      await Future.delayed(const Duration(milliseconds: 900), () {
-        Modular.to.navigate("/home");
+      Future.delayed(const Duration(seconds: 2), () {
+        Modular.to.navigate("/home/");
       });
     });
-  }
-
-  @override
-  void dispose() {
-    _controller.dispose();
-    super.dispose();
   }
 
   @override
@@ -48,20 +32,11 @@ class _SplashScreenState extends State<SplashScreen>
         systemNavigationBarColor: context.primary,
       ),
       child: Scaffold(
-          backgroundColor: context.primary,
-          body: ValueListenableBuilder(
-            valueListenable: _animation,
-            builder: (context, opacity, child) {
-              return AnimatedOpacity(
-                opacity: opacity,
-                duration: _controller.duration!,
-                child: Center(
-                  child:
-                      SvgPicture.asset("assets/images/logo/be-talent-logo.svg"),
-                ),
-              );
-            },
-          )),
+        backgroundColor: context.primary,
+        body: Center(
+          child: SvgPicture.asset("assets/images/logo/be-talent-logo.svg"),
+        ),
+      ),
     );
   }
 }
